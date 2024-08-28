@@ -1,0 +1,78 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="App.xaml.cs" />
+    <Compile Remove="AssemblyInfo.cs" />
+    <Compile Remove="MainWindow.xaml.cs" />
+    <Compile Remove="Views\RecipeCategoriesView.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Resource1.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Beef-shank-and-green-papaya-soup.jpg" />
+    <None Remove="Resources\cambodian-fried-noodles-with-chicken-S076A1.jpg" />
+    <None Remove="Resources\Chinese-Sausage-Egg-Fried-Rice4.jpg" />
+    <None Remove="Resources\Easyspaghettiwithtomatosauce_11715_DDMFS_1x2_2425-c67720e4ea884f22a852f0bb84a87a80.jpg" />
+    <None Remove="Resources\merlin_209652387_1b5eee4c-9da5-443c-90e0-db20ee51a246-superJumbo.jpg" />
+    <None Remove="Resources\our-local-s-signature.jpg" />
+    <None Remove="Resources\Tom-Yum-Soup.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="App.xaml" />
+    <Page Remove="MainWindow.xaml" />
+    <Page Remove="Views\RecipeCategoriesView.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NPOI" Version="2.7.1" />
+    <PackageReference Include="PDFsharp" Version="6.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </Resource>
+    <Resource Include="Resources\Beef-shank-and-green-papaya-soup.jpg" />
+    <Resource Include="Resources\cambodian-fried-noodles-with-chicken-S076A1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Chinese-Sausage-Egg-Fried-Rice4.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Easyspaghettiwithtomatosauce_11715_DDMFS_1x2_2425-c67720e4ea884f22a852f0bb84a87a80.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\merlin_209652387_1b5eee4c-9da5-443c-90e0-db20ee51a246-superJumbo.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\our-local-s-signature.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Tom-Yum-Soup.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resource1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
